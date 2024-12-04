@@ -4,3 +4,83 @@
     box-sizing: border-box;
 }
 
+
+/* body
+{
+    background-image: url(../content/img/background_img2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0,9;
+    background-size: cover;
+    height: 60vh;
+} */
+
+
+main
+{
+    background-color: black;
+}
+
+.menu-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content-container
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.about-me
+{
+    background-color: blue;
+    grid-column: span 3;
+    grid-row: span 2;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.portfolio
+{
+    background-color: red;
+    grid-column: span 2;
+    grid-row: span 3;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contact
+{
+    background-color: green;
+    grid-column: span 2;
+    grid-row: span 3;
+
+    display: flex;
+    justify-content: center;
+}
+
+.logo
+{
+    background-color: yellow;
+
+    display: flex;
+    justify-content: center;
+}
+
+.other
+{
+    background-color: pink;
+    grid-column: span 3;
+    grid-row: span 2;
+
+    display: flex;
+    justify-content: center;
+}
