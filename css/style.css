@@ -9,17 +9,45 @@ body
     background-color: white;
 }
 
+header
+{
+    background-color: darkblue;
+}
 main
 {
-    background-color: black;
     padding: 5px;
 }
 
-.menu-container
+footer
+{
+    background-image: linear-gradient(#191970, darkblue);
+    padding: 2rem 2rem;
+    color: aliceblue;
+    text-align: center;
+}
+
+footer img
+{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
+.top-nav
 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 2rem 2rem 2rem 2rem;
+    font-size: 20px;
+}
+
+.menu
+{
+    text-decoration: none;
+    font-size: larger;
+    display: flex;
+    color: aliceblue;
+
 }
 
 .content-container
@@ -28,34 +56,44 @@ main
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 5px;
-}
-
-.about-me
-{
-    background-color: blue;
-    grid-column: span 3;
-    grid-row: span 2;
-
-    display: flex;
-    justify-content: center;
-    
-    
+    background-color: black;
 }
 
 .portfolio
 {
     background-color: red;
-    grid-column: span 2;
-    grid-row: span 3;
+    grid-column: span 3;
+    grid-row: span 2;
 
     display: flex;
-    justify-content: center;
-    border-top-right-radius: 25px;
+    justify-content: center;   
+    background-image: url(../content/img/laptop.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    transition: background-size 0.2s;
+}
+
+.portfolio:hover 
+{
+    background-size: contain;
 }
 
 .contact
 {
     background-color: green;
+    grid-column: span 2;
+    grid-row: span 3;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.about-me
+{
+    background-color: blue;
     grid-column: span 2;
     grid-row: span 3;
 
@@ -71,7 +109,7 @@ main
     justify-content: center;
 }
 
-.other
+.misc
 {
     background-color: pink;
     grid-column: span 3;
@@ -81,13 +119,21 @@ main
     justify-content: center;
 }
 
-a
+.content
 {
     display: inline-block;
     color: white;  
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    padding: 4rem 4rem 4rem 4rem;
+
+    transition: transform .2s;
+}
+
+.content:hover
+{
+    transform: scale(1.2);
 }
 
 a:hover
@@ -95,4 +141,10 @@ a:hover
     opacity: 0.8;
     background-color: white;
     color: #1e1e1e;
+}
+
+.footer-links
+{
+    display: flex;
+    justify-content: center;
 }
