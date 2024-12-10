@@ -21,14 +21,13 @@ body
 
 .content
 {
-    padding-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    
 }
 
 aside
 {
+    padding-top: 5rem;
     padding-left: 2rem;
     position: sticky;
     top: 0;
@@ -41,7 +40,7 @@ aside
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid orange;
+    border-right: .15em solid #FF5C00;
     margin: 0%;
     letter-spacing: .15em;
     animation: 
@@ -76,7 +75,7 @@ main
 
 main p
 {
-    padding-bottom: 3rem;
+    
 }
 
 .top-nav
@@ -102,19 +101,61 @@ main p
     height: auto;
 }
 
-#about
+#about 
 {
+  --s: 20px;
+  border: 8px solid  #FF5C00; 
+  mask: 
+    conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+    0 0/calc(100% - var(--s)) calc(100% - var(--s));
+    padding: 5px;
 
+
+    margin-bottom: 4rem;
 }
 
 #experience
 {
+    --s: 20px;
+    border: 8px solid  #1F51FF; 
+    mask: 
+      conic-gradient(#000 0 0) content-box,
+      conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+      0 0/calc(100% - var(--s)) calc(100% - var(--s));
+      padding: 5px;
 
+
+      margin-bottom: 4rem;
+  
+}
+
+#projects
+{
+    --s: 20px;
+    border: 8px solid  #ff073a; 
+    mask: 
+      conic-gradient(#000 0 0) content-box,
+      conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+      0 0/calc(100% - var(--s)) calc(100% - var(--s));
+      padding: 5px;
+
+
+      margin-bottom: 4rem;
 }
 
 #portfolio
 {
+    --s: 20px;
+    border: 8px solid  #CFFF04; 
+    mask: 
+      conic-gradient(#000 0 0) content-box,
+      conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+      0 0/calc(100% - var(--s)) calc(100% - var(--s));
+      padding: 5px;
 
+
+      margin-bottom: 4rem;
 }
 
 
