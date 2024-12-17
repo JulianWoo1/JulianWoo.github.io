@@ -9,6 +9,8 @@ header
     position: sticky;
     top: 0;
     background-color: #05080e;
+    z-index: 100;
+
 }
 
 body
@@ -101,7 +103,7 @@ main p
     height: auto;
 }
 
-#about 
+#about
 {
   --s: 20px;
   border: 8px solid  #FF5C00; 
@@ -127,7 +129,6 @@ main p
 
 
       margin-bottom: 4rem;
-  
 }
 
 #projects
@@ -143,6 +144,46 @@ main p
 
       margin-bottom: 4rem;
 }
+
+.projects-year1
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.projects-year1 div
+{
+    border-radius: 15px;
+    background: #ff073a;
+
+}
+
+.projects-year1 a
+{
+    text-decoration: none;
+}
+
+
+.projects-year1 a:hover
+{
+    opacity: 0.9;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+}
+
+
+.projects-year1 img
+{
+    max-width: 200px;
+    width: auto;
+    align-content: center;
+    
+}
+
 
 #portfolio
 {
