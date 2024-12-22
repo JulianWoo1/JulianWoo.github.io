@@ -31,7 +31,7 @@ header
 }
 main
 {
-    display: grid;
+    display: grid;  
     place-items: center; 
     grid-template-columns: 1fr 5fr 1fr; 
 }
@@ -155,7 +155,7 @@ html
 #experience
 {
     --s: 20px;
-    border: 8px solid  #1F51FF; 
+    border: 8px solid  #00F0FF; 
     mask: 
       conic-gradient(#000 0 0) content-box,
       conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
@@ -169,7 +169,7 @@ html
 #projects
 {
     --s: 20px;
-    border: 8px solid  #ff073a; 
+    border: 8px solid  #FF003C; 
     mask: 
       conic-gradient(#000 0 0) content-box,
       conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
@@ -194,13 +194,14 @@ html
 .projects-card
 {
     border-radius: 15px;
-    background: #ff073a;
+    background: #FF003C;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 8px;
     padding: 1rem;
     width: 200px;
+    max-width: 200px;
 
 }
 

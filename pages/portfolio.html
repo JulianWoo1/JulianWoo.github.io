@@ -6,23 +6,24 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <title>portfolio</title>
 </head>
-<body>
+<body>  
     <header>
         <div class="top-nav">
-            <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>  
+            <button class="openbtn" aria-expanded="false" aria-controls="mySidebar" onclick="toggleNav()">☰ Toggle Sidebar</button>
             <a href="julianwoo.html">Home Logo</a>
             <p><a href="mailto:julianwoo2005@gmail.com">Contact me</a></p>
         </div>
     </header>
 
+
     
-    <section id="mySidebar" class="mySidebar sidebar">
+    <section id="mySidebar" class="mySidebar sidebar" aria-hidden="true" role="complementary">
         <div class="typewriter">
-            <h1>&lt;Julian Woo/&gt;</h1>
-            <h3>&lt;Student Informtica/&gt;</h3>
+            <h1>&lt;/Julian Woo&gt;</h1>
+            <h3>Student Informtica</h3>
         </div>
 
-        <nav class="side-menu">
+        <nav class="side-menu" role="navigation">
             <a href="julianwoo.html">Home</a>
             <a href="#reflecteren">Reflecteren</a>
             <a href="#feedback">Feedback</a>
