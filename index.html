@@ -42,7 +42,7 @@
                         <img src="content/img/Instagram_Glyph_White.png" alt="instagram-logo-link-to-Julian-Woo's-Instagram-profile">
                     </a>
                 </div>
-            </section>
+            </section>  
 
             <main id="main">
                 <div class="content-container">
@@ -86,9 +86,9 @@
                     <h3>jaar 1</h3>
 
                     <div class="projects-year1">
-                        <a href="#">
+                        <a href="sunnySocks.html">
                             <div class="projects-card">
-                                <img src="content/img/Project_sunny_socks.png.png" alt="Sunny-Socks-Website-Project-Screenshot">
+                                <img src="content/img/project-sunny-socks-homepage.png" alt="Sunny-Socks-Website-Project-Screenshot">
                                 <h3>Project Webdevelopment & design</h3>
                                 <h4>periode 1</h4>
                                 <p>Een website maken voor het bedrijf Sunny Socks</p>
@@ -127,7 +127,7 @@
 
                 <section id="portfolio" class="portfolio-container">
                     <h2>Login to Portfolio</h2>
-                    <form action="authenticate.php" method="POST">
+                    <form id="loginForm" method="POST">
                             <label for="username">Username</label>
                             <input type="text" name="username" id="username" placeholder="Username" required>
                             <label for="password">Password</label>
@@ -137,11 +137,37 @@
                                 <label for="show-password"> show password</label>
                             </div>
                         <input type="submit" value="submit">
-                    </form>
+                    </form> 
                 </section>
-             </div>
-            </main>
+                <script>
+                    const storedUsername = "Julianwoo";
+                    const storedPassword = "Wachtwoord123";
+                
+                    document.getElementById('loginForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                
+                        const username = document.getElementById('username').value;
+                        const password = document.getElementById('password').value;
+                
+                        if (username === storedUsername && password === storedPassword) {
+                            alert('Login successful!');
+                            window.location.href = 'portfolio.html';
+                        } else {
+                            alert('Invalid username or password');
+                        }
+                    });
+                
+                    // Password toggle function
+                    function togglePassword() {
+                        const passwordField = document.getElementById('password');
+                        if (passwordField.type === 'password') {
+                            passwordField.type = 'text';
+                        } else {
+                            passwordField.type = 'password';
+                        }
+                    }
+                </script>             
+            </main>     
         <footer>© Copyright <script>document.write(new Date().getFullYear());</script> Julian Woo</footer>
     </body>
     </html>
-

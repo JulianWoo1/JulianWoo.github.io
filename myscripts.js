@@ -20,4 +20,5 @@ function myFunction() {
     } else {
       x.type = "password";
     }
-  }
+  } 
+

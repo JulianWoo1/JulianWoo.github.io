@@ -208,7 +208,7 @@ html
 .projects-year1 a
 {
     text-decoration: none;
-}
+} 
 
 
 .projects-year1 a:focus, a:hover
@@ -254,7 +254,7 @@ html
 
 #portfolio h2{
     text-align: center;
-    margin: 1rem;
+    margin: 1rem; 
 }
 
 form
@@ -339,4 +339,20 @@ footer img
 {
     display: flex;
     justify-content: center;
+}
+
+.sunnySocks-container{
+    display: flex;
+}
+
+
+.sunnySocks-container img
+{
+    max-width: 80%;
+}
+
+iframe{
+    width: 100%;
+    height: 600px;
+    border: none;
 }
