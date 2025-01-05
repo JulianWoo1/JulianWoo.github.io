@@ -2,7 +2,7 @@
     --primary-color: #FF5C00;
     --secondary-color: #1F51FF;
     --background-color: #0f172a;
-    --font-family: "OpenDyslexic", Arial, sans-serif;
+    --font-family: "OpenDyslexic", "Arial", sans-serif, "Play";
     --border-radius: 8px;
   }
 
@@ -15,7 +15,7 @@
 body
 {
     background-color: var(--background-color);
-    font-family: "OpenDyslexic", Arial, sans-serif;
+    font-family: "OpenDyslexic", "Play",Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: aliceblue;
@@ -27,8 +27,19 @@ header
     top: 0;
     background-color: #05080e;
     z-index: 100;
+} 
 
+header img{
+    max-width: 3rem;
+    display: flex;
 }
+.logo {
+    font-family: "Play", serif;
+    font-weight: 700;
+    font-size: 35px;
+    font-style: normal;
+}
+  
 main
 {
     display: grid;  
@@ -356,3 +367,4 @@ iframe{
     height: 600px;
     border: none;
 }
+
