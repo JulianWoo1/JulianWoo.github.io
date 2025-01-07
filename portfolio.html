@@ -58,41 +58,88 @@
 
             <section id="reflecteren">
                 <h2>Reflecteren</h2>
-                <iframe src="content/pdf/reflectieverslag.pdf" frameborder="0"></iframe>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown1')">☰ Open reflectieverslag</button>
+                <div id="dropdown1" class="dropdown-content">
+                    <iframe src="content/pdf/reflectieverslag.pdf" frameborder="0"></iframe>
+                </div>
             </section>
             
             <section id="feedback">
                 <h2>Feedback</h2>
-                <iframe src="content/pdf/Feedback ic-inf-1d Julian.pdf" frameborder="0"></iframe>
-                <iframe src="content/pdf/Feedback_edumundo.pdf" frameborder="0"></iframe>
+                <h3>Groep feedback</h3>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown2')">☰ Open Groep feedback</button>
+                <div id="dropdown2" class="dropdown-content">
+                    <iframe src="content/pdf/Feedback ic-inf-1d Julian.pdf" frameborder="0"></iframe>
+                </div>
+                <h3>Edumundo Feedback</h3>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown3')">☰ Open Edumundo Feedback</button>
+                <div id="dropdown3" class="dropdown-content">
+                    <iframe src="content/pdf/Feedback_edumundo.pdf" frameborder="0"></iframe>
+                </div>
             </section>
             
             <section id="pva">
                 <h2>Plan van Aanpak</h2>
-                <iframe src="content/pdf/PVA Webdev INF-1D Versie 1.pdf" frameborder="0"></iframe>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown4')">☰ Open Plan vab Aanpak</button>
+                <div id="dropdown4" class="dropdown-content">
+                    <iframe src="content/pdf/PVA Webdev INF-1D Versie 1.pdf" frameborder="0"></iframe>
+                </div>
             </section>
 
             <section id="communiceren">
                 <h2>communiceren</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto alias itaque molestias quam repudiandae assumenda consectetur pariatur a, hic ipsam labore nostrum repellendus? Quos, sequi praesentium? Autem inventore omnis soluta.</p>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown5')">☰ Open Dropdown</button>
+                <div id="dropdown5" class="dropdown-content">
+                    <iframe src="#" frameborder="0"></iframe>
+                </div>
             </section>
 
             <section id="presenteren">
                 <h2>presenteren</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi praesentium in autem ab, blanditiis cupiditate ducimus neque libero fuga explicabo ut doloremque animi! At aut explicabo voluptates ipsa officiis consectetur.</p>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown6')">☰ Open Dropdown</button>
+                <div id="dropdown6" class="dropdown-content">
+                    <iframe src="#" frameborder="0"></iframe>
+                </div>
             </section>
 
             <section id="vergaderen">
                 <h2>Vergader technieken</h2>
                 <h3>Agenda</h3>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown7')">☰ Open vergader agenda</button>
+                <div id="dropdown7" class="dropdown-content">
+                    <iframe src="content/pdf/Agenda_Gesprek_Opdrachtgever.pdf" frameborder="0"></iframe>
+                </div>
                 <h3>Notullen</h3>
-                <iframe src="content/pdf/Notulen_Plenair_18-10-2024.pdf" frameborder="0"></iframe>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown8')">☰ Open notulen</button>
+                <div id="dropdown8" class="dropdown-content">
+                    <iframe src="content/pdf/Notulen_Plenair_18-10-2024.pdf" frameborder="0"></iframe>
+                </div>
             </section>
 
             <section id="edumundo">
                 <h2>Edumundo</h2>   
-                <iframe src="content/pdf/Portfolio 2022_2023-edited.pdf" frameborder="0"></iframe>
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown9')">☰ Open Edumundo opdrachten</button>
+                <div id="dropdown9" class="dropdown-content">
+                    <iframe src="content/pdf/Portfolio 2022_2023-edited.pdf" frameborder="0"></iframe>
+                </div>
             </section>
+
+            <script>
+                function toggleDropdown(dropdownId) {
+                    const dropdown = document.getElementById(dropdownId);
+                    const iframe = dropdown.querySelector('iframe');
+
+                    if (dropdown.style.display === 'block') {
+                        dropdown.style.display = 'none';
+                        iframe.style.height = '600px';
+                    } else {
+                        dropdown.style.display = 'block';
+                        iframe.style.height = '1000px';
+                        iframe.style.width = '1085px'
+                    }
+                }
+            </script>
+
         </div>
     </main>
 

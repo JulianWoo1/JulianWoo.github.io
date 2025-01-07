@@ -43,7 +43,6 @@ header img{
 main
 {
     display: grid;  
-    place-items: center; 
     grid-template-columns: 1fr 5fr 1fr; 
 }
 
@@ -80,7 +79,7 @@ main
     font-size: 20px;
     cursor: pointer;
     background-color: #05080e;
-    color: white;
+    color: aliceblue;
     padding: 10px 15px;
     border: none;
   }
@@ -281,7 +280,7 @@ input[type=text], input[type=password]
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid aliceblue;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -289,7 +288,7 @@ input[type=text], input[type=password]
 input[type=submit] {
     width: 100%;
     background-color: #FF5C00;
-    color: white;
+    color: aliceblue;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -362,9 +361,36 @@ footer img
     max-width: 80%;
 }
 
-iframe{
+.dropdown-btn {
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 700px;
+    font-size: 16px;
+    background-color: #283f75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.dropdown-btn:hover {
+    background-color: #1d65b0;
+}
+
+.dropdown-content {
+    display: none; 
+    margin-top: 10px;
+    border: 1px solid aliceblue;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dropdown-content iframe {
     width: 100%;
     height: 600px;
     border: none;
 }
-
