@@ -28,11 +28,11 @@
                 </div>
 
                 <nav class="side-menu" role="navigation">
-                    <a href="#about">About Me</a>
-                    <a href="#experience">Experience</a> 
-                    <a href="#projects">Projects</a>
-                    <a href="#portfolio">Portfolio</a>  
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="#about" aria-label="Go to About Me section">About Me</a>
+                    <a href="#experience" aria-label="Go to Experience section">Experience</a> 
+                    <a href="#projects" aria-label="Go to Projects section">Projects</a>
+                    <a href="#portfolio" aria-label="Go to Portfolio section">Portfolio</a>  
+                    <a href="javascript:void(0)" class="closebtn" aria-label="Close Sidebar" onclick="closeNav()">×</a>
                 </nav>
 
                 <script src="myscripts.js"></script>
@@ -116,7 +116,7 @@
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" placeholder="password" required>
                             <div>
-                                <input type="checkbox" id="show-password"onclick="myFunction()">
+                                <input type="checkbox" id="show-password" aria-checked="false" onclick="myFunction()">
                                 <label for="show-password"> show password</label>
                             </div>
                         <input type="submit" value="submit">
