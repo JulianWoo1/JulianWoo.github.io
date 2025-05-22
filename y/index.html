@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="content/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <title>Julian Woo</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.8.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.8.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.8.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+        <header>
+            <div class="top-nav">
+                <button class="openbtn" aria-expanded="false" aria-controls="mySidebar" onclick="toggleNav()">☰</button>
+                <a href="index.html" class="logo">&lt;/Julian Woo&gt;</a>
+                <div>
+                <p><a href="mailto:julianwoo2005@gmail.com"><img src="content/img/mail.png" alt="Icon-to-email-me">Contact me</a></p>
+                </div>
+            </div>
+        </header>
+
+            <section id="mySidebar" class="mySidebar sidebar" aria-hidden="true" role="complementary">
+                <div class="typewriter">
+                    <h1>&lt;/Julian Woo&gt;</h1>
+                    <h3>Student Informtica</h3>
+                </div>
+
+                <nav class="side-menu" role="navigation">
+                    <a href="#about" aria-label="Go to About Me section">About Me</a>
+                    <a href="#experience" aria-label="Go to Experience section">Experience</a> 
+                    <a href="#projects" aria-label="Go to Projects section">Projects</a>
+                    <a href="#portfolio" aria-label="Go to Portfolio section">Portfolio</a>  
+                    <a href="javascript:void(0)" class="closebtn" aria-label="Close Sidebar" onclick="closeNav()">×</a>
+                </nav>
+
+                <script src="myscripts.js"></script>
+
+                <div class="imgLinks">
+                    <a href="https://github.com/JulianWoo1" aria-label="link to Julian Woo's Github profile">
+                        <img src="content/img/github-mark-white.png" alt="GitHub-Logo-Link-to-Julian-Woo's-GitHub-profile">
+                    </a>
+                    <a href="https://www.linkedin.com/in/julian-woo-486491344/"aria-label="link to Julian Woo's Linkedin profile">
+                        <img src="content/img/LI-In-Bug.png" alt="linkedin-logo-link-Julian-Woo's-Linkedin-profile">
+                    </a>
+                    <a href="#" aria-label="link to Julian Woo's Instagram profile">
+                        <img src="content/img/Instagram_Glyph_White.png" alt="instagram-logo-link-to-Julian-Woo's-Instagram-profile">
+                    </a>
+                </div>
+            </section>  
+
+            <main id="main">
+                <div class="content-container">
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>Ik ben een student Informtica op de Hogeschool NHL Stenden Emmen. Dit is mijn portfolio</p>
+                </section>
+
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <p>Ik ben een eerste jaar student op de school NHL Stenden.</p>
+                    </p>
+                </section>
+
+                <section id="projects">
+                    <h2>Projects</h2>
+
+                    <h3>Jaar 1</h3>
+
+                    <div class="projects-year1">
+                        <a href="sunnySocks.html">
+                            <div class="projects-card">
+                                <img src="content/img/project-sunny-socks-homepage.png" alt="Sunny-Socks-Website-Project-Screenshot">
+                                <h3>Project Webdevelopment & design</h3>
+                                <h4>periode 1</h4>
+                                <p>Een website maken voor het bedrijf Sunny Socks</p>
+                            </div>
+                        </a>
+
+
+                        <a href="#">
+                            <div class="projects-card">
+                                <img src="content/img/placeholder.jpeg" alt="placeholder-image">
+                                <h3>Project Database Application Management</h3>
+                                <h4>Periode 2</h4>
+                                <p>Database Germorkos</p>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="projects-card">
+                                <img src="content/img/placeholder.jpeg" alt="placeholder-image">
+                                <h3>Project 3</h3>
+                                <h4>Periode 3</h4>
+                                <p>adsf</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="projects-card">
+                                <img src="content/img/placeholder.jpeg" alt="placeholder-image">
+                                <h3>Project 4</h3>
+                                <h4>Periode 4</h4>
+                                <p>efsrgd</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+
+                <section id="portfolio">
+                    <h2>Login to Portfolio</h2>
+                    <form id="loginForm" method="POST">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" placeholder="Username" required>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                            <div>
+                                <input type="checkbox" id="show-password" aria-checked="false" onclick="myFunction()">
+                                <label for="show-password"> show password</label>
+                            </div>
+                        <input type="submit" value="submit">
+                    </form> 
+                </section>
+                <script>
+                    const storedUsername = "Julianwoo";
+                    const storedPassword = "rkPjNnb7uLMuRkskvwKF";
+                
+                    document.getElementById('loginForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                
+                        const username = document.getElementById('username').value;
+                        const password = document.getElementById('password').value;
+                
+                        if (username === storedUsername && password === storedPassword) {
+                            alert('Login successful!');
+                            window.location.href = 'portfolio.html';
+                        } else {
+                            alert('Invalid username or password');
+                        }
+                    });
+                
+                    // Password toggle function
+                    function togglePassword() {
+                        const passwordField = document.getElementById('password');
+                        if (passwordField.type === 'password') {
+                            passwordField.type = 'text';
+                        } else {
+                            passwordField.type = 'password';
+                        }
+                    }
+                </script>
+                
+            </main>     
+        <footer>© Copyright <script>document.write(new Date().getFullYear());</script> Julian Woo</footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
