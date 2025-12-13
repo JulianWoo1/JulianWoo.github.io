@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="myscripts.js">
-
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="content/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <title>portfolio</title>
+    <title>Portfolio - Julian Woo</title>
 </head>
 <body>  
     <header>
@@ -18,14 +16,15 @@
             <button class="openbtn" aria-expanded="false" aria-controls="mySidebar" onclick="toggleNav()">☰</button>
             <a href="index.html" class="logo">&lt;/Julian Woo&gt;</a>
             <div>
-            <p><a href="mailto:julianwoo2005@gmail.com"><img src="content/img/mail.png" alt="Icon-to-email-me">Contact me</a></p>
+                <p><a href="mailto:julianwoo2005@gmail.com"><img src="content/img/mail.png" alt="Icon-to-email-me">Contact me</a></p>
             </div>
         </div>
     </header>
+
     <section id="mySidebar" class="mySidebar sidebar" aria-hidden="true" role="complementary">
         <div class="typewriter">
             <h1>&lt;/Julian Woo&gt;</h1>
-            <h3>Student Informtica</h3>
+            <h3>Student Informatica</h3>
         </div>
 
         <nav class="side-menu" role="navigation">
@@ -39,21 +38,14 @@
             <a href="#edumundo">Edumundo</a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         </nav>
- 
-        <script src="myscripts.js"></script>
 
         <div class="imgLinks">
-            <a href="https://github.com/JulianWoo1">
-                <img src="content/img/github-mark-white.png" alt="GitHub-Logo-Link-to-Julian-Woo's-GitHub-profile">
-            </a>
-            <a href="https://www.linkedin.com/in/julian-woo-486491344/">
-                <img src="content/img/LI-In-Bug.png" alt="linkedin-logo-link-Julian-Woo's-Linkedin-profile">
-            </a>
-            <a href="#">
-                <img src="content/img/Instagram_Glyph_White.png" alt="instagram-logo-link-to-Julian-Woo's-Instagram-profile">
-            </a>
+            <a href="https://github.com/JulianWoo1"><img src="content/img/github-mark-white.png" alt="GitHub profile"></a>
+            <a href="https://www.linkedin.com/in/julian-woo-486491344/"><img src="content/img/LI-In-Bug.png" alt="LinkedIn profile"></a>
+            <a href="#"><img src="content/img/Instagram_Glyph_White.png" alt="Instagram profile"></a>
         </div>
     </section>
+
     <main>
         <div class="content-container">
             <h1>Portfolio</h1>
@@ -61,287 +53,157 @@
             <h3>Filters</h3>
             <div class="filter">
                 <button class="filter-btn active" data-filter="all">Alles</button>
-                <button class="filter-btn" data-filter="jaar1">Jaar1</button>
+                <button class="filter-btn" data-filter="jaar1">Jaar 1</button>
+                <button class="filter-btn" data-filter="jaar2">Jaar 2</button>
+                <button class="filter-btn" data-filter="jaar3">Jaar 3</button>
+                <button class="filter-btn" data-filter="jaar4">Jaar 4</button>
                 <button class="filter-btn" data-filter="1-2">Semester 1</button>
                 <button class="filter-btn" data-filter="3-4">Semester 2</button>
                 <button class="filter-btn" data-filter="edumundo">Edumundo</button>
             </div>
             
-            <ul>    
-                <li id="reflecteren"class="portfolio" data-category="1-2 jaar1">
-                    <h2>Reflecteren</h2>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown1')">☰ Open reflectieverslag</button>
-                    <div id="dropdown1" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/reflecteren/reflectieverslag.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-                
-                <li id="feedback"class="portfolio" data-category="1-2 jaar1">
-                    <h2>Feedback</h2>
-                    <h3>Groep feedback periode 1</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown2')">☰ Open Groep feedback</button>
-                    <div id="dropdown2" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/feedback/Feedback ic-inf-1d Julian.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>Groep feedback periode 2</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown13')">☰ Open Groep feedback</button>
-                    <div id="dropdown13" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/feedback/Groepsfeedback_periode 2_van_Julian.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>Edumundo Feedback</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown3')">☰ Open Edumundo Feedback</button>
-                    <div id="dropdown3" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/feedback/Feedback_edumundo.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-                
-                <li id="pva"class="portfolio" data-category="1-2 jaar1">
-                    <h2>Plan van Aanpak</h2>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown4')">☰ Open Plan van Aanpak</button>
-                    <div id="dropdown4" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/pva/Beoordelingsformulier_PvA_1D.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="communiceren"class="portfolio" data-category="1-2 jaar1">
-                    <h2>Communiceren</h2>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown5')">☰ Open Dropdown</button>
-                    <div id="dropdown5" class="dropdown-content">
-                        <iframe src="#" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="presenteren"class="portfolio" data-category="1-2 jaar1">
-                    <h2>presenteren</h2>
-                    <h3>Voorbereiding groepspresentatie</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown6')">☰ Open Dropdown</button>
-                    <div id="dropdown6" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/presenteren/Presentatie_SunnySocks_voorbereiding.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>Voorbereiding individuele presentatie</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown7')">☰ Open Dropdown</button>
-                    <div id="dropdown7" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/presenteren/voorbereiding-presentatie-assesment-professional-skills.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>Feedbackformulier groepspresentatie</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown8')">☰ Open Dropdown</button>
-                    <div id="dropdown8" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/presenteren/Groepspresentatie1INFD.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>Feedbackformulier individuele</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown9')">☰ Open Dropdown</button>
-                    <div id="dropdown9" class="dropdown-content">
-                        <iframe src="#" frameborder="0"></iframe>
-                    </div>
-
-                </li>
-
-                <li id="vergaderen"class="portfolio" data-category="1-2 jaar1">
-                    <h2>Vergader technieken</h2>
-                    <h3>Agenda</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown10')">☰ Open vergader agenda</button>
-                    <div id="dropdown10" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/vergaderen/Agenda_Gesprek_Opdrachtgever.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>Notulen_plenair</h3>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown11')">☰ Open notulen</button>
-                    <div id="dropdown11" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/vergaderen/Notulen_Plenair_18-10-2024.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="edumundo"class="portfolio" data-category="1-2 jaar1 edumundo">
-                    <h2>Edumundo Semester 1</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown12')">☰ Open Edumundo opdrachten semester 1</button>
-                    <div id="dropdown12" class="dropdown-content">
-                        <iframe src="content/pdf/semester1/edumundo/Portfolio 2022_2023-edited.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="reflecteren2"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Reflecteren semester 2</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown15')">☰ Reflectieverslag</button>
-                    <div id="dropdown15" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/reflectie/Reflectieverslag-semester2.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="feedback2"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Feedback semester 2</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown16')">☰ Gekregen Feedback</button>
-                    <div id="dropdown16" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/feedback/gekregenFeedback/gekregenFeedbackSemester2.pdf" frameborder="0"></iframe>
-                    </div>
-
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown21')">☰ Gegeven Feedback</button>
-                    <div id="dropdown21" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/feedback/gegevenFeedback/Gegeven_Feedback_semester2.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="bewijs"class="portfolio" data-category="3-4 jaar1">
-                    <h2>POP Bewijs</h2>   
-                    <h3>POP Professionele verslagen schrijven</h3>  
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown23')">☰ Bewijs Professionele verslagen schrijven</button>
-                    <div id="dropdown23" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/TechnischeAdviesrapport/Technisch_Adviesrapport.pdf" frameborder="0"></iframe>
-                    </div>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown29')">☰ Scoring rubrics project Innovate</button>
-                    <div id="dropdown29" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/TechnischeAdviesrapport/ScoringRubrics_Project_Innovate.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h3>POP OOP 1 herkansing</h3>  
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown24')">☰ Bewijs OOP 1 herkansing</button>
-                    <div id="dropdown24" class="dropdown-content">
-                        <iframe src="#" frameborder="0"></iframe>
-                    </div>
-                    <h3>POP Communiceren</h3>  
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown25')">☰ Bewijs Communiceren</button>
-                    <div id="dropdown25" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/Communicatie/Communicatie_Semester2.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-                
-                <li id="pop"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Persoonlijk Ontwikkel Plan</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown26')">☰ Open Persoonlijk Ontwikkel PLan</button>
-                    <div id="dropdown26" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/pop/Persoonlijk ontwikkelingsplan Julian Woo opleiding Informatica handtekening.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="PVA2"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Plan van Aanpak semester 2</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown17')">☰ pva</button>
-                    <div id="dropdown17" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/pva/PvA - Project Innovate - Groep B.pdf" frameborder="0"></iframe>
-                    </div>
-                    
-                    <h2>Urenverantwoording</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown28')">☰ Urenverantwoording</button>
-                    <div id="dropdown28" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/urenverantwoording/Urenverantwoording.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="communiceren2"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Communiceren</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown18')">☰ Communiceren</button>
-                    <div id="dropdown18" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/Communicatie/Communicatie_Semester2.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="presenteren2"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Presenteren</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown27')">☰ Presenteren</button>
-                    <div id="dropdown27" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/presentatie/App Investor Pitch Deck.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="edumundo2"class="portfolio" data-category="3-4 jaar1 edumundo">
-                    <h2>Edumundo Semester 2</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown22')">☰ Open Edumundo opdrachten semester 2</button>
-                    <div id="dropdown22" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/Edumundo/Edumundo_semester_2.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-                
-                <li id="onderzoek"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Onderzoek Technische AdviesRaport</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown19')">☰ Onderzoek Technische AdviesRaport</button>
-                    <div id="dropdown19" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/TechnischeAdviesrapport/Technisch_Adviesrapport.pdf" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-                <li id="rapporteren"class="portfolio" data-category="3-4 jaar1">
-                <li id="onderzoek"class="portfolio" data-category="3-4 jaar1">
-                    <h2>Rapporteren Technische AdviesRaport</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown19')">☰ Onderzoek Technische AdviesRaport</button>
-                    <div id="dropdown19" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/TechnischeAdviesrapport/Technisch_Adviesrapport.pdf" frameborder="0"></iframe>
-                    </div>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown30')">☰ Scoring ScoringRubrics Project Innovate</button>
-                    <div id="dropdown30" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/TechnischeAdviesrapport/ScoringRubrics_Project_Innovate.pdf" frameborder="0"></iframe>
-                    </div>
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown31')">☰ Bouwplan</button>
-                    <div id="dropdown31" class="dropdown-content">
-                        <iframe src="content/pdf/semester2/TechnischeAdviesrapport/Bouwplan.pdf" frameborder="0"></iframe>
-                    </div>
-                    <h2>rapporteren Hogeschool Taal certificaat</h2>   
-                    <button class="dropdown-btn" onclick="toggleDropdown('dropdown20')">☰ Rapporteren Hogeschool Taal certificaat n.v.t.</button>
-                    <div id="dropdown20" class="dropdown-content">
-                        <iframe src="#" frameborder="0"></iframe>
-                    </div>
-                </li>
-
-            </ul>
-
-            <script>
-                function toggleDropdown(dropdownId) {
-                    const dropdown = document.getElementById(dropdownId);
-                    const iframe = dropdown.querySelector('iframe');
-
-                    if (dropdown.style.display === 'block') {
-                        dropdown.style.display = 'none';
-                        iframe.style.height = '600px';
-                    } else {
-                        dropdown.style.display = 'block';
-                        iframe.style.height = '1000px';
-                        iframe.style.width = '1085px'
-                    }
-                }
-
-            </script>
-                <script>
-                    const filterList = document.querySelector('.filter');
-                    const filterButtons = filterList.querySelectorAll('.filter-btn');
-                    const portfolio = document.querySelectorAll('.portfolio');
-
-                    filterButtons.forEach((button) => {
-                        button.addEventListener('click', (e) => {
-                            const filter = e.target.getAttribute('data-filter');
-
-                            if(!document.startViewTransition){
-                                updateActiveButton(e.target);
-                                filterPortf(filter);
-                            }
-
-                            document.startViewTransition(() => {
-                            updateActiveButton(e.target);
-                            filterPortf(filter);
-                            })
-                            console.log(filter);
-                        })
-                    })
-
-                    function updateActiveButton(newButton){
-                        filterList.querySelector('.active').classList.remove('active');
-                        newButton.classList.add('active');
-                    }
-
-                    function filterPortf(portfFilter){
-                        portfolio.forEach((portf) => {
-                            const portfCatagory = portf.getAttribute('data-category');
-                        
-                        if(portfCatagory.includes(portfFilter) || portfFilter === "all") {
-                            portf.removeAttribute('hidden');
-
-                        } else {
-                            portf.setAttribute('hidden', '');
-                        }
-                        });
-                    }
-                </script>
+            <ul id="portfolioList"></ul>
         </div>
     </main>
 
+    <footer>© Copyright <span id="year"></span> Julian Woo</footer>
 
-    <footer>© Copyright <script>document.write(new Date().getFullYear());</script> Julian Woo</footer>
+    <script src="myscripts.js"></script>
+    <script>
+        // Portfolio data structure
+        const portfolioData = [
+            {id: 'reflecteren', title: 'Reflecteren', category: '1-2 jaar1', items: [
+                {btn: 'Open reflectieverslag', pdf: 'content/pdf/semester1/reflecteren/reflectieverslag.pdf'}
+            ]},
+            {id: 'feedback', title: 'Feedback', category: '1-2 jaar1', items: [
+                {subtitle: 'Groep feedback periode 1', btn: 'Open Groep feedback', pdf: 'content/pdf/semester1/feedback/Feedback ic-inf-1d Julian.pdf'},
+                {subtitle: 'Groep feedback periode 2', btn: 'Open Groep feedback', pdf: 'content/pdf/semester1/feedback/Groepsfeedback_periode 2_van_Julian.pdf'},
+                {subtitle: 'Edumundo Feedback', btn: 'Open Edumundo Feedback', pdf: 'content/pdf/semester1/feedback/Feedback_edumundo.pdf'}
+            ]},
+            {id: 'pva', title: 'Plan van Aanpak', category: '1-2 jaar1', items: [
+                {btn: 'Open Plan van Aanpak', pdf: 'content/pdf/semester1/pva/Beoordelingsformulier_PvA_1D.pdf'}
+            ]},
+            {id: 'communiceren', title: 'Communiceren', category: '1-2 jaar1', items: [
+                {btn: 'Open Dropdown', pdf: '#'}
+            ]},
+            {id: 'presenteren', title: 'Presenteren', category: '1-2 jaar1', items: [
+                {subtitle: 'Voorbereiding groepspresentatie', btn: 'Open Dropdown', pdf: 'content/pdf/semester1/presenteren/Presentatie_SunnySocks_voorbereiding.pdf'},
+                {subtitle: 'Voorbereiding individuele presentatie', btn: 'Open Dropdown', pdf: 'content/pdf/semester1/presenteren/voorbereiding-presentatie-assesment-professional-skills.pdf'},
+                {subtitle: 'Feedbackformulier groepspresentatie', btn: 'Open Dropdown', pdf: 'content/pdf/semester1/presenteren/Groepspresentatie1INFD.pdf'},
+                {subtitle: 'Feedbackformulier individuele', btn: 'Open Dropdown', pdf: '#'}
+            ]},
+            {id: 'vergaderen', title: 'Vergader technieken', category: '1-2 jaar1', items: [
+                {subtitle: 'Agenda', btn: 'Open vergader agenda', pdf: 'content/pdf/semester1/vergaderen/Agenda_Gesprek_Opdrachtgever.pdf'},
+                {subtitle: 'Notulen_plenair', btn: 'Open notulen', pdf: 'content/pdf/semester1/vergaderen/Notulen_Plenair_18-10-2024.pdf'}
+            ]},
+            {id: 'edumundo', title: 'Edumundo Semester 1', category: '1-2 jaar1 edumundo', items: [
+                {btn: 'Open Edumundo opdrachten semester 1', pdf: 'content/pdf/semester1/edumundo/Portfolio 2022_2023-edited.pdf'}
+            ]},
+            {id: 'reflecteren2', title: 'Reflecteren semester 2', category: '3-4 jaar1', items: [
+                {btn: 'Reflectieverslag', pdf: 'content/pdf/semester2/reflectie/Reflectieverslag-semester2.pdf'}
+            ]},
+            {id: 'feedback2', title: 'Feedback semester 2', category: '3-4 jaar1', items: [
+                {btn: 'Gekregen Feedback', pdf: 'content/pdf/semester2/feedback/gekregenFeedback/gekregenFeedbackSemester2.pdf'},
+                {btn: 'Gegeven Feedback', pdf: 'content/pdf/semester2/feedback/gegevenFeedback/Gegeven_Feedback_semester2.pdf'}
+            ]},
+            {id: 'bewijs', title: 'POP Bewijs', category: '3-4 jaar1', items: [
+                {subtitle: 'POP Professionele verslagen schrijven', btn: 'Bewijs Professionele verslagen schrijven', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/Technisch_Adviesrapport.pdf'},
+                {btn: 'Scoring rubrics project Innovate', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/ScoringRubrics_Project_Innovate.pdf'},
+                {subtitle: 'POP OOP 1 herkansing', btn: 'Bewijs OOP 1 herkansing', pdf: '#'},
+                {subtitle: 'POP Communiceren', btn: 'Bewijs Communiceren', pdf: 'content/pdf/semester2/Communicatie/Communicatie_Semester2.pdf'}
+            ]},
+            {id: 'pop', title: 'Persoonlijk Ontwikkel Plan', category: '3-4 jaar1', items: [
+                {btn: 'Open Persoonlijk Ontwikkel Plan', pdf: 'content/pdf/semester2/pop/Persoonlijk ontwikkelingsplan Julian Woo opleiding Informatica handtekening.pdf'}
+            ]},
+            {id: 'PVA2', title: 'Plan van Aanpak semester 2', category: '3-4 jaar1', items: [
+                {btn: 'pva', pdf: 'content/pdf/semester2/pva/PvA - Project Innovate - Groep B.pdf'},
+                {title: 'Urenverantwoording', btn: 'Urenverantwoording', pdf: 'content/pdf/semester2/urenverantwoording/Urenverantwoording.pdf'}
+            ]},
+            {id: 'communiceren2', title: 'Communiceren', category: '3-4 jaar1', items: [
+                {btn: 'Communiceren', pdf: 'content/pdf/semester2/Communicatie/Communicatie_Semester2.pdf'}
+            ]},
+            {id: 'presenteren2', title: 'Presenteren', category: '3-4 jaar1', items: [
+                {btn: 'Presenteren', pdf: 'content/pdf/semester2/presentatie/App Investor Pitch Deck.pdf'}
+            ]},
+            {id: 'edumundo2', title: 'Edumundo Semester 2', category: '3-4 jaar1 edumundo', items: [
+                {btn: 'Open Edumundo opdrachten semester 2', pdf: 'content/pdf/semester2/Edumundo/Edumundo_semester_2.pdf'}
+            ]},
+            {id: 'onderzoek', title: 'Onderzoek Technische AdviesRaport', category: '3-4 jaar1', items: [
+                {btn: 'Onderzoek Technische AdviesRaport', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/Technisch_Adviesrapport.pdf'}
+            ]},
+            {id: 'rapporteren', title: 'Rapporteren Technische AdviesRaport', category: '3-4 jaar1', items: [
+                {btn: 'Onderzoek Technische AdviesRaport', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/Technisch_Adviesrapport.pdf'},
+                {btn: 'Scoring ScoringRubrics Project Innovate', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/ScoringRubrics_Project_Innovate.pdf'},
+                {btn: 'Bouwplan', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/Bouwplan.pdf'},
+                {title: 'rapporteren Hogeschool Taal certificaat', btn: 'Rapporteren Hogeschool Taal certificaat n.v.t.', pdf: '#'}
+            ]}
+        ];
 
+        // Generate portfolio items
+        let dropdownCounter = 0;
+        const list = document.getElementById('portfolioList');
+        
+        portfolioData.forEach(section => {
+            const li = document.createElement('li');
+            li.id = section.id;
+            li.className = 'portfolio';
+            li.setAttribute('data-category', section.category);
+            
+            let html = `<h2>${section.title}</h2>`;
+            
+            section.items.forEach(item => {
+                const dropdownId = `dropdown${dropdownCounter++}`;
+                if (item.title) html += `<h2>${item.title}</h2>`;
+                if (item.subtitle) html += `<h3>${item.subtitle}</h3>`;
+                html += `
+                    <button class="dropdown-btn" onclick="toggleDropdown('${dropdownId}')">☰ ${item.btn}</button>
+                    <div id="${dropdownId}" class="dropdown-content">
+                        <iframe src="${item.pdf}" frameborder="0"></iframe>
+                    </div>
+                `;
+            });
+            
+            li.innerHTML = html;
+            list.appendChild(li);
+        });
 
+        // Toggle dropdown function
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            const iframe = dropdown.querySelector('iframe');
+            const isOpen = dropdown.style.display === 'block';
+            
+            dropdown.style.display = isOpen ? 'none' : 'block';
+            iframe.style.height = isOpen ? '600px' : '1000px';
+            iframe.style.width = isOpen ? '' : '1085px';
+        }
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolio = document.querySelectorAll('.portfolio');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                
+                const transition = () => {
+                    document.querySelector('.filter .active').classList.remove('active');
+                    e.target.classList.add('active');
+                    
+                    portfolio.forEach(item => {
+                        const category = item.dataset.category;
+                        category.includes(filter) || filter === 'all' 
+                            ? item.removeAttribute('hidden')
+                            : item.setAttribute('hidden', '');
+                    });
+                };
+
+                document.startViewTransition ? document.startViewTransition(transition) : transition();
+            });
+        });
+
+        // Set year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
