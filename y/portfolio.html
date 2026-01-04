@@ -9,6 +9,70 @@
     <link rel="icon" type="image/x-icon" href="content/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <title>Portfolio - Julian Woo</title>
+    <style>
+        .filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .filter-divider {
+            width: 2px;
+            height: 30px;
+            background-color: #6361eb;
+            margin: 0 5px;
+        }
+        
+        #clearFilters {
+            background-color: #cc0033 !important;
+            border-color: #cc0033 !important;
+        }
+        
+        #clearFilters:hover {
+            background-color: #ff003c !important;
+            border-color: #ff003c !important;
+        }
+        
+        .filter-status {
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px 16px;
+            background-color: #283f75;
+            border-left: 4px solid #FF5C00;
+            border-radius: 5px;
+            font-size: 14px;
+            color: aliceblue;
+            display: none;
+            font-family: "OpenDyslexic", "Play", Arial, sans-serif;
+        }
+
+        .portfolio {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #1a2744;
+            border-radius: 8px;
+            border: 2px solid #283f75;
+        }
+
+        .portfolio h2 {
+            color: #FF5C00;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio h3 {
+            color: #00F0FF;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        #portfolioList {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>  
     <header>
@@ -54,14 +118,19 @@
             <h3>Filters</h3>
             <div class="filter">
                 <button class="filter-btn active" data-filter="all">Alles</button>
+                <div class="filter-divider"></div>
                 <button class="filter-btn" data-filter="jaar1">Jaar 1</button>
                 <button class="filter-btn" data-filter="jaar2">Jaar 2</button>
                 <button class="filter-btn" data-filter="jaar3">Jaar 3</button>
                 <button class="filter-btn" data-filter="jaar4">Jaar 4</button>
+                <div class="filter-divider"></div>
                 <button class="filter-btn" data-filter="1-2">Semester 1</button>
                 <button class="filter-btn" data-filter="3-4">Semester 2</button>
+                <div class="filter-divider"></div>
                 <button class="filter-btn" data-filter="edumundo">Edumundo</button>
+                <button class="filter-btn" id="clearFilters" data-filter="all">🔄 Reset</button>
             </div>
+            <div id="filterStatus" class="filter-status"></div>
             
             <ul id="portfolioList"></ul>
         </div>
@@ -74,6 +143,7 @@
     <script src="myscripts.js"></script>
     <script>
         const portfolioData = [
+            // Jaar 1 Semester 1
             {id: 'reflecteren', title: 'Reflecteren', category: '1-2 jaar1', items: [
                 {btn: 'Open reflectieverslag', pdf: 'content/pdf/semester1/reflecteren/reflectieverslag.pdf'}
             ]},
@@ -101,6 +171,8 @@
             {id: 'edumundo', title: 'Edumundo Semester 1', category: '1-2 jaar1 edumundo', items: [
                 {btn: 'Open Edumundo opdrachten semester 1', pdf: 'content/pdf/semester1/edumundo/Portfolio 2022_2023-edited.pdf'}
             ]},
+            
+            // Jaar 1 Semester 2
             {id: 'reflecteren2', title: 'Reflecteren semester 2', category: '3-4 jaar1', items: [
                 {btn: 'Reflectieverslag', pdf: 'content/pdf/semester2/reflectie/Reflectieverslag-semester2.pdf'}
             ]},
@@ -138,6 +210,39 @@
                 {btn: 'Scoring ScoringRubrics Project Innovate', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/ScoringRubrics_Project_Innovate.pdf'},
                 {btn: 'Bouwplan', pdf: 'content/pdf/semester2/TechnischeAdviesrapport/Bouwplan.pdf'},
                 {title: 'rapporteren Hogeschool Taal certificaat', btn: 'Rapporteren Hogeschool Taal certificaat n.v.t.', pdf: '#'}
+            ]},
+
+            // Jaar 2 Semester 1
+            {id: 'reflecteren-y2s1', title: 'Reflecteren Jaar 2', category: '1-2 jaar2', items: [
+                {btn: 'Open reflectieverslag', pdf: '#'}
+            ]},
+            {id: 'feedback-y2s1', title: 'Feedback Jaar 2', category: '1-2 jaar2', items: [
+                {subtitle: 'Feedbackformulier projectteam periode 1', btn: 'Open feedback periode 1', pdf: '#'},
+                {subtitle: 'Feedbackformulier projectteam en docent', btn: 'Open feedback met docent', pdf: '#'}
+            ]},
+            {id: 'beroeporientatie', title: 'Beroepsoriëntatie', category: '1-2 jaar2', items: [
+                {btn: 'Open beroepsoriëntatie activiteiten', pdf: '#'}
+            ]},
+            {id: 'pop-y2s1', title: 'Persoonlijk Ontwikkel Plan Jaar 2', category: '1-2 jaar2', items: [
+                {btn: 'Open POP met leerdoelen en bewijslast', pdf: '#'}
+            ]},
+            {id: 'hogeschooltaal', title: 'Hogeschooltaal Certificaat', category: '1-2 jaar2', items: [
+                {btn: 'Open Hogeschooltaal certificaat', pdf: '#'}
+            ]},
+            {id: 'onderzoek-y2s1', title: 'Onderzoek Jaar 2', category: '1-2 jaar2', items: [
+                {btn: 'Open onderzoeksvoorstel', pdf: '#'}
+            ]},
+            {id: 'projectmanagement', title: 'Projectmanagement', category: '1-2 jaar2', items: [
+                {subtitle: 'Scrum producten', btn: 'Open backlog en burndowncharts', pdf: '#'}
+            ]},
+            {id: 'ethiek', title: 'Ethiek', category: '1-2 jaar2', items: [
+                {btn: 'Open ethiek beroepsproducten', pdf: '#'}
+            ]},
+            {id: 'edumundo-y2s1', title: 'Edumundo Jaar 2 Semester 1', category: '1-2 jaar2 edumundo', items: [
+                {subtitle: 'Module Plannen en Organiseren', btn: 'Opdracht 9: Planning 2.0', pdf: '#'},
+                {subtitle: 'Module Ken jezelf', btn: 'Opdracht 8 & 9: Waarden', pdf: '#'},
+                {subtitle: 'Module Verken uw mogelijkheden', btn: 'Opdracht 5: Verken het werkveld', pdf: '#'},
+                {subtitle: 'Module Ken je kwaliteiten', btn: 'Waarom het belangrijk is om je kwaliteiten te kennen', pdf: '#'}
             ]}
         ];
 
@@ -179,29 +284,93 @@
             iframe.style.width = isOpen ? '' : '1085px';
         }
 
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
+        // Filter functionality with multiple selection
+        const filterButtons = document.querySelectorAll('.filter-btn:not(#clearFilters)');
         const portfolio = document.querySelectorAll('.portfolio');
+        const clearButton = document.getElementById('clearFilters');
+        const filterStatus = document.getElementById('filterStatus');
+        let activeFilters = new Set(['all']);
+
+        function updateFilterDisplay() {
+            const filters = Array.from(activeFilters).filter(f => f !== 'all');
+            if (filters.length === 0) {
+                filterStatus.textContent = '📋 Alle items worden getoond';
+                filterStatus.style.display = 'block';
+            } else {
+                const filterNames = filters.map(f => {
+                    const btn = document.querySelector(`[data-filter="${f}"]`);
+                    return btn ? btn.textContent : f;
+                });
+                filterStatus.textContent = `🔍 Actieve filters: ${filterNames.join(', ')}`;
+                filterStatus.style.display = 'block';
+            }
+        }
+
+        function applyFilters() {
+            const transition = () => {
+                portfolio.forEach(item => {
+                    const category = item.dataset.category;
+                    const categoryArray = category.split(' ');
+                    
+                    if (activeFilters.has('all')) {
+                        item.removeAttribute('hidden');
+                    } else {
+                        const matches = Array.from(activeFilters).every(filter => 
+                            categoryArray.includes(filter)
+                        );
+                        matches ? item.removeAttribute('hidden') : item.setAttribute('hidden', '');
+                    }
+                });
+                updateFilterDisplay();
+            };
+
+            document.startViewTransition ? document.startViewTransition(transition) : transition();
+        }
 
         filterButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const filter = e.target.dataset.filter;
                 
-                const transition = () => {
-                    document.querySelector('.filter .active').classList.remove('active');
+                if (filter === 'all') {
+                    activeFilters.clear();
+                    activeFilters.add('all');
+                    filterButtons.forEach(b => b.classList.remove('active'));
                     e.target.classList.add('active');
+                } else {
+                    if (activeFilters.has('all')) {
+                        activeFilters.clear();
+                        filterButtons.forEach(b => {
+                            if (b.dataset.filter === 'all') b.classList.remove('active');
+                        });
+                    }
                     
-                    portfolio.forEach(item => {
-                        const category = item.dataset.category;
-                        category.includes(filter) || filter === 'all' 
-                            ? item.removeAttribute('hidden')
-                            : item.setAttribute('hidden', '');
-                    });
-                };
-
-                document.startViewTransition ? document.startViewTransition(transition) : transition();
+                    if (activeFilters.has(filter)) {
+                        activeFilters.delete(filter);
+                        e.target.classList.remove('active');
+                        
+                        if (activeFilters.size === 0) {
+                            activeFilters.add('all');
+                            document.querySelector('[data-filter="all"]').classList.add('active');
+                        }
+                    } else {
+                        activeFilters.add(filter);
+                        e.target.classList.add('active');
+                    }
+                }
+                
+                applyFilters();
             });
         });
+
+        clearButton.addEventListener('click', () => {
+            activeFilters.clear();
+            activeFilters.add('all');
+            filterButtons.forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-filter="all"]').classList.add('active');
+            applyFilters();
+        });
+
+        updateFilterDisplay();
 
         // Toggle sidebar function
         function toggleNav() {
