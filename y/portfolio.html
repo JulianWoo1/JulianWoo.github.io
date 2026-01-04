@@ -18,6 +18,7 @@
             <div>
                 <p><a href="mailto:julianwoo2005@gmail.com"><img src="content/img/mail.png" alt="Icon-to-email-me">Contact me</a></p>
             </div>
+            <button id="logoutBtn" style="margin-left:1rem; padding: 10px 20px; cursor: pointer; background-color: #FF5C00; color: white; border: none; border-radius: 4px;">Logout</button>
         </div>
     </header>
 
@@ -46,7 +47,7 @@
         </div>
     </section>
 
-    <main>
+    <main id="protectedContent" hidden>
         <div class="content-container">
             <h1>Portfolio</h1>
             
@@ -68,9 +69,10 @@
 
     <footer>© Copyright <span id="year"></span> Julian Woo</footer>
 
+    <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-auth-compat.js"></script>
     <script src="myscripts.js"></script>
     <script>
-        // Portfolio data structure
         const portfolioData = [
             {id: 'reflecteren', title: 'Reflecteren', category: '1-2 jaar1', items: [
                 {btn: 'Open reflectieverslag', pdf: 'content/pdf/semester1/reflecteren/reflectieverslag.pdf'}
@@ -139,7 +141,6 @@
             ]}
         ];
 
-        // Generate portfolio items
         let dropdownCounter = 0;
         const list = document.getElementById('portfolioList');
         
@@ -202,7 +203,27 @@
             });
         });
 
-        // Set year
+        // Toggle sidebar function
+        function toggleNav() {
+            const sidebar = document.getElementById("mySidebar");
+            const btn = document.querySelector(".openbtn");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                btn.setAttribute("aria-expanded", "false");
+                sidebar.setAttribute("aria-hidden", "true");
+            } else {
+                sidebar.style.width = "250px";
+                btn.setAttribute("aria-expanded", "true");
+                sidebar.setAttribute("aria-hidden", "false");
+            }
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.querySelector(".openbtn").setAttribute("aria-expanded", "false");
+            document.getElementById("mySidebar").setAttribute("aria-hidden", "true");
+        }
+
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
